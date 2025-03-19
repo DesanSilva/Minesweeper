@@ -5,7 +5,7 @@ a = Analysis(
     ['src\\minesweeper.v1.0.0.py'],
     pathex=[],
     binaries=[],
-    datas=[('assets/*', 'assets')],
+    datas=[('assets/*', '.')],
     hiddenimports=['numpy'],
     hookspath=[],
     hooksconfig={},
