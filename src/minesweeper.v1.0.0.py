@@ -1,6 +1,11 @@
 from tkinter import *
 import numpy as np
 import random
+import sys
+import os
+
+BASE_PATH = sys._MEIPASS if getattr(sys, "frozen", False) else os.path.abspath("../assets")
+ICON_PATH = os.path.join(BASE_PATH, "icon.ico")
 
 class Minesweeper():
     def __init__(self, mines=50):
@@ -10,7 +15,7 @@ class Minesweeper():
         
         self.window = Tk()
         self.window.title('Minesweeper')
-        self.window.iconbitmap("../assets/icon.ico")
+        self.window.iconbitmap(ICON_PATH)
         
         self.canvas = Canvas(self.window, width=self.board_size, height=self.board_size)
         self.canvas.pack()
